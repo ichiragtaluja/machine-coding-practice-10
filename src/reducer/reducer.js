@@ -1,11 +1,10 @@
 import React from "react";
+import { inventoryData } from "../data/data";
 
 export const reducer = () => {
-  const initialState = { city: "Oakville" };
+  const initialState = inventoryData;
   const dataReducer = (state, action) => {
     switch (action.type) {
-      case "CHANGECITY":
-        return { ...state, city: "Toronto" };
       default:
         return state;
     }

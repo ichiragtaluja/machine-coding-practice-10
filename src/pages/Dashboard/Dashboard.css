@@ -1,0 +1,14 @@
+.dashboard {
+  display: flex;
+}
+
+.dashboard-widget {
+  width: 120px;
+  height: 120px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  margin: 1em;
+}

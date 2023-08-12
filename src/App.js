@@ -1,16 +1,19 @@
 import "./App.css";
-import { Routes, Route, NavLink, Link } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import { Explore } from "./pages/Explore/Explore";
+import { Routes, Route,  } from "react-router-dom";
+import { Departments } from "./pages/Departments/Departments";
+import { Products } from "./pages/Products/Products";
+import { Dashboard } from "./pages/Dashboard/Dashboard";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <NavLink to="/">Home</NavLink>{" "}
-      <NavLink to="/explore">Explore</NavLink>
+      <Navbar />
+
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/explore" element={<Explore />}></Route>
+        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/departments" element={<Departments />}></Route>
+        <Route path="/products" element={<Products />}></Route>
       </Routes>
     </div>
   );
