@@ -2,8 +2,10 @@ import React from "react";
 import { useData } from "../../context/DataContext";
 import "./Products.css";
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const Products = () => {
+  const navigate = useNavigate();
   const {
     state,
     dispatch,
@@ -68,7 +70,7 @@ export const Products = () => {
           <option value="Stock">Stock</option>
         </select>
 
-        <button>New</button>
+        <button onClick={() => navigate("/add-new-product")}>New</button>
       </div>
       <table>
         <tr>
